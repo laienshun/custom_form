@@ -1,0 +1,81 @@
+@import "value"; //公共变量
+html {
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    font-size: 14px;
+    color: $main-font-color;
+    line-height: 1.4;
+    background: $main-bg;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    min-width: $min-width;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*========== 设置滚动条 ==========*/
+@media(-webkit-max-device-pixel-ratio:1) {
+	::-webkit-scrollbar-track-piece {
+		background-color: #fff
+	}
+	::-webkit-scrollbar {
+		width: 6px;
+		height: 6px
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: #c2c2c2;
+		background-clip: padding-box;
+		min-height: 28px
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background-color: #a0a0a0
+	}
+}
+// 设置滚动条兼容ie
+html {
+  scrollbar-face-color:#f6f6f6;
+  scrollbar-highlight-color:#fff;
+  scrollbar-shadow-color:#eeeeee;
+  scrollbar-3dlight-color:#eeeeee;
+  scrollbar-arrow-color:#000;
+  scrollbar-track-color:#fff;
+  scrollbar-darkshadow-color:#fff;
+}
+
+/*========== 公共类 ==========*/
+
+// 工具类
+.t_show {
+  display: block!important;
+}
+.t_hide {
+  display: none!important;
+}
+.t_clear {
+  zoom: 1;
+  &:after,
+  &:before {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.t_center {
+  text-align: center;
+}
+.t_right {
+  text-align: right;
+}
+.t_float_left {
+  float: left;
+}
+.t_float_right {
+  float: right;
+}
+.t_vm {
+  vertical-align: middle;
+}
+
+/*========== ui库修改 ==========*/
